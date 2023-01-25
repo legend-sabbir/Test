@@ -7,7 +7,7 @@ const router = express.Router();
 const products = require('../data');
 app.use(cors())
 
-router.get('/test', cors(), (req, res) => {
+router.get('/', cors(), (req, res) => {
   res.json(
     [{
       'id': '001',
