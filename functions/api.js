@@ -41,7 +41,7 @@ router.get('/', (req, res) => {
 
     return last - first
   }).slice(startIndex, endIndex);
-  res.render('index', {
+  res.render('index.ejs', {
     data
   });
 });
