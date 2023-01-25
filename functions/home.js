@@ -9,7 +9,7 @@ app.use(cors())
 
 app.set('view engine', 'ejs');
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
   const page = req.query.page || 1;
   const perPage = 20;
   const startIndex = (page - 1) * perPage;
