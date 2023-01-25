@@ -44,9 +44,9 @@ router.get('/', (req, res) => {
   res.send(data)
 });
 
-router.get('/abc', (req, res) => {
-  res.send("abc")
-}
+router.get('/:abc', (req, res) => {
+  res.send(req.params.abc)
+})
 
 router.get('/product/:productName', (req, res) => {
   const productName = req.params.productName;
