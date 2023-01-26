@@ -7,6 +7,7 @@ const router = express.Router();
 const products = require('../../data');
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
 
 router.get('/', (req, res) => {
   const page = req.query.page || 1;
@@ -25,10 +26,7 @@ router.get('/', (req, res) => {
   });
 });
 
-/*
-router.get('/', (req, res) => {
-  res.send("hello")
-})*/
+
 router.get('/test', (req, res) => {
   res.send("test")
 })
