@@ -1,0 +1,21 @@
+{
+  "name": "back-end-netly-main",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/e9f165ee-578e-4d47-b2f9-27d34d45a6ea/deploy-status)](https://app.netlify.com/sites/netlify-backend/deploys)",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd functions/api && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legend-sabbir/Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legend-sabbir/Test/issues"
+  },
+  "homepage": "https://github.com/legend-sabbir/Test#readme"
+}

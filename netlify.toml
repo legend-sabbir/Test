@@ -5,5 +5,3 @@
     to="/.netlify/functions/api/:splat"
     from="/*"
     status=200 
-[[plugins]]
-  package = "netlify-plugin-npm-install"
