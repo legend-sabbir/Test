@@ -6,9 +6,6 @@ const app = express();
 const router = express.Router();
 const products = require('../../data');
 
-app.set('views', path.join(__dirname, '..', '..'));
-app.use(express.static(path.join(__dirname, '..', '..', 'views')));
-
 app.set('view engine', 'ejs');
 
 router.get('/', (req, res) => {
@@ -23,7 +20,7 @@ router.get('/', (req, res) => {
 
     return last - first
   }).slice(startIndex, endIndex);
-  res.render('views/index', {
+  res.render('index', {
     data
   });
 });
