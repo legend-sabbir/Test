@@ -37,6 +37,9 @@ router.get('/', (req, res) => {
 router.get('/test', (req, res) => {
   res.send("test")
 })
+router.get('/:aa', (req, res) => {
+  res.send(req.params.aa)
+})
 
 app.use('/', router);
 module.exports.handler = serverless(app);
