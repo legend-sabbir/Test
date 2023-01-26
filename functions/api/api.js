@@ -27,12 +27,19 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/test', (req, res) => {
-  res.send("test")
-})
-router.get('/:aa', (req, res) => {
-  res.send(req.params.aa)
-})
+app.get('/:productName', (req, res) => {
+  const productName = req.params.productName;
+  const product = products.get(productName);
+  if (!product) {
+    console.log(`Product ${productName} not found.`);
+    res.send("Product not found");
+  } else {
+    res.render('product', { product });
+  }
+});
+
+
+
 
 app.use('/', router);
 module.exports.handler = serverless(app);
