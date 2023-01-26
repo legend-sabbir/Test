@@ -6,7 +6,9 @@ const app = express();
 const router = express.Router();
 const products = require('../../data');
 app.use(cors())
-app.set('views', '../../views')
+
+// app.use(express.static(path.join(__dirname, '..', '..', 'views')));
+
 app.set('view engine', 'ejs');
 
 router.get('/', (req, res) => {
