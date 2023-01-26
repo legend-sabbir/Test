@@ -2,12 +2,14 @@ const express = require('express');
 const ejs = require('ejs');
 const serverless = require('serverless-http');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 const router = express.Router();
 const products = require('../../data');
-app.use(cors())
 
-// app.use(express.static(path.join(__dirname, '..', '..', 'views')));
+app.use(cors())
+// app.set('views', path.join(__dirname, '..', '..'));
+app.use(express.static(path.join(__dirname, '..', '..', 'views')));
 
 app.set('view engine', 'ejs');
 
@@ -23,7 +25,7 @@ router.get('/', (req, res) => {
 
     return last - first
   }).slice(startIndex, endIndex);
-  res.render('../../views/index', {
+  res.render('index', {
     data
   });
 });
