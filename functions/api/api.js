@@ -40,6 +40,5 @@ app.get('/:productName', (req, res) => {
 
 
 
-
 app.use('/', router);
 module.exports.handler = serverless(app);
